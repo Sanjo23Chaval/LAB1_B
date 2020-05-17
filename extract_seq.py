@@ -9,7 +9,6 @@ def print_seqs(ids, dbfile):
     with open(dbfile, 'r') as fdb: #In this way we read the file line by line instead of charging everything at the same time
         for line in fdb:
             if line[0] == ">":
-                #pid = line.split('|')[1]
                 pid = line[1:].rstrip()
             if pid in ids:
                 print line.rstrip()
